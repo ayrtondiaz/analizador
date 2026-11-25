@@ -38,4 +38,5 @@ Candidates don't know how their CV, portfolio and LinkedIn perform against autom
 - T2 done, commit `3cddcf5` (feat(ui)): form, pdfjs adapter, results rendering, styles, README.
 - Verification (observed, final tree): `npm install` ok (0 vulnerabilities); `npx tsc --noEmit` clean; `npx vitest run` 8 files / 47 tests passed; `npm run build` succeeded (dist/ built).
 - Not verified: manual in-browser run with a real PDF (pdfjs worker) - only build-time checks.
-- Next: manual browser smoke test; tune rule weights with real CVs.
+- Published 2026-11-25: public repo https://github.com/ayrtondiaz/analizador, `main` fast-forwarded to `feat/analyzer-mvp`. GitHub Pages serves the `gh-pages` branch (built `dist/` pushed manually, because the gh token lacks the `workflow` scope) at https://ayrtondiaz.github.io/analizador/. Index, JS, CSS and pdf worker return 200.
+- Next: manual browser smoke test; tune rule weights with real CVs; automate deploy with a GitHub Actions workflow once the token has the `workflow` scope.
