@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Estima tu probabilidad de pasar un filtro ATS y la revisión de un reclutador con tu CV, portafolio y LinkedIn. Todo se calcula en tu navegador." />
+    <title>Analizador de CV, portafolio y LinkedIn</title>
+    <script type="module" crossorigin src="./assets/index-Cyu00Gr2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BGbGYg1Y.css">
+  </head>
+  <body>
+    <main>
+      <header class="page-header">
+        <h1>Analizador de perfil profesional</h1>
+        <p class="muted">
+          Estima tu probabilidad de pasar un filtro ATS y la revisión rápida de un reclutador. El análisis es
+          100&nbsp;% local: tus datos nunca salen de tu navegador.
+        </p>
+      </header>
+
+      <form id="analyzer-form" novalidate>
+        <section class="panel">
+          <h2>Oferta de trabajo <span class="optional">(opcional)</span></h2>
+          <p class="muted">Pega la descripción del puesto para medir la coincidencia de palabras clave.</p>
+          <label class="sr-only" for="job-description">Descripción de la oferta</label>
+          <textarea id="job-description" rows="5" placeholder="Pega aquí la descripción de la oferta…"></textarea>
+        </section>
+
+        <section class="panel">
+          <h2>CV</h2>
+          <label class="field" for="cv-file">Sube tu CV en PDF</label>
+          <input id="cv-file" type="file" accept="application/pdf,.pdf" />
+          <p id="cv-status" class="muted small" role="status"></p>
+          <label class="field" for="cv-text">o pega el texto del CV</label>
+          <textarea id="cv-text" rows="8" placeholder="Pega aquí el texto de tu CV…"></textarea>
+        </section>
+
+        <section class="panel">
+          <h2>Portafolio</h2>
+          <label class="field" for="portfolio-url">URL del sitio</label>
+          <input id="portfolio-url" type="url" inputmode="url" placeholder="https://tunombre.com" />
+          <p class="muted small">
+            Por seguridad, el navegador no puede descargar sitios de otros dominios (restricción CORS). Para un
+            análisis completo, abre tu portafolio, pulsa <kbd>Ctrl</kbd>+<kbd>U</kbd> (ver código fuente), copia
+            todo el contenido y pégalo abajo. Sin el código, solo se evalúan las reglas de la URL.
+          </p>
+          <label class="field" for="portfolio-html">Código fuente (HTML) del sitio</label>
+          <textarea id="portfolio-html" rows="6" placeholder="Pega aquí el código fuente de la página…"></textarea>
+        </section>
+
+        <section class="panel">
+          <h2>LinkedIn</h2>
+          <p class="muted small">
+            En tu perfil pulsa <strong>Más → Guardar como PDF</strong> y sube el archivo, o pega el texto de tu perfil.
+          </p>
+          <label class="field" for="linkedin-file">Sube el PDF de tu perfil</label>
+          <input id="linkedin-file" type="file" accept="application/pdf,.pdf" />
+          <p id="linkedin-status" class="muted small" role="status"></p>
+          <label class="field" for="linkedin-text">o pega el texto del perfil</label>
+          <textarea id="linkedin-text" rows="8" placeholder="Pega aquí el texto de tu perfil de LinkedIn…"></textarea>
+        </section>
+
+        <button type="submit" class="primary">Analizar</button>
+      </form>
+
+      <section id="results" aria-live="polite"></section>
+    </main>
+  </body>
+</html>
